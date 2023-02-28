@@ -1,1 +1,27 @@
 # Cyber-Keynotes
+# Bypassing 2FA
+
+• 2FA adds additional check before loggin in, like sms, authenticator...etc
+
+• Response manipulation
+  • Give some dummy code and try to work on the response I
+  • Try to change the response to some true representing term
+  • Or give a valid code and capture the response and then use the same response for invalid code
+  • Just keep on testing
+  • Response manipulation works most of the time.
+  
+• Status code manipulation
+  • As the name suggests sometime after giving an invalid code we get reponse with response code 4xx
+  • Change it to something like 2xx, and see if it works
+  
+• Code leakage in response, thoroughly check the response as sometimes it may reveal the valid code.
+
+• JS file analysis
+  • JS file relevant to server may contain logic/leaks regarding the code.
+  
+• Exploiting No-rate limit on the 2fa accepting code(Bruteforce)
+• Able to use User-A's code for User-B
+• CSRF on 2FA disabling, as the name CSRF suggests here there wont be any protecting for disabling 2FA
+• Social engineering to disable 2FA
+• By trying some null codes
+• 2FA always have some feature called backup-codes, we can abuse it's funtionality using the above mentioned techniques.
